@@ -6,6 +6,42 @@ import React from "react";
 import GradientButton from "../ui/GradientButton";
 
 const Footer = () => {
+  const footerLinks = [
+    {
+      title: "Pages",
+      childs: [
+        { id: 1, name: "Product", href: "/about" },
+        { id: 2, name: "Contact", href: "/contact" },
+        { id: 3, name: "Articles", href: "/articles" },
+        { id: 4, name: "Careers", href: "/coming-soon" },
+      ],
+    },
+    {
+      title: "TECHNOLOGY",
+      childs: [
+        { id: 5, name: "MIRYA vs n8n", href: "/coming-soon" },
+        { id: 6, name: "MIRYA vs n8n", href: "/coming-soon" },
+        { id: 7, name: "MIRYA vs n8n", href: "/coming-soon" },
+        { id: 8, name: "John user test", href: "/coming-soon" },
+      ],
+    },
+    {
+      title: "LEGAL",
+      childs: [
+        { id: 9, name: "Privacy Policy", href: "/coming-soon" },
+        { id: 10, name: "Security", href: "/coming-soon" },
+        { id: 11, name: "Imprint", href: "/coming-soon" },
+      ],
+    },
+    {
+      title: "CONNECT",
+      childs: [
+        { id: 12, name: "Youtube", href: "https://www.youtube.com/" },
+        { id: 13, name: "Twitter", href: "https://x.com" },
+      ],
+    },
+  ];
+
   const handleBackToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -89,7 +125,7 @@ const Footer = () => {
                   textColor="#fff"
                 />
               </div>
-              <div className="flex items-center gap-4 mt-8">
+              {/* <div className="flex items-center gap-4 mt-8">
                 <Link
                   href="https://www.facebook.com/"
                   target="_blank"
@@ -129,8 +165,31 @@ const Footer = () => {
                     alt="Website"
                   />
                 </Link>
-              </div>
+              </div> */}
             </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-between gap-8 pt-[58px] w-full">
+            {footerLinks.map((section, index) => (
+              <div key={index} className="">
+                <h3 className="text-[#FFFFFF80] heading-6 font-regular leading-5 mb-4">
+                  {section.title}
+                </h3>
+                <div className="flex flex-col gap-[14px]">
+                  {section.childs.map((link) => (
+                    <Link
+                      key={link.id}
+                      href={link.href}
+                      className={`heading-6 font-regular text-[#FFFFFF] ${
+                        link.name === "John user test" ? "underline" : ""
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Bottom Section */}

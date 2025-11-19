@@ -8,6 +8,8 @@ import Faq from "@/app/components/Home/Faq";
 import Benefits from "@/app/components/Home/Benefits";
 import Indicator from "@/app/components/Home/Indicator";
 import Plans from "@/app/components/Home/Plans";
+import BuildForYou from "@/app/components/Home/BuildForYou";
+import Testimonials from "@/app/components/Home/Testimonials";
 
 const HomePage = () => {
   return (
@@ -16,10 +18,12 @@ const HomePage = () => {
       <Demo />
       <HowToUse />
       <Features />
+      <BuildForYou/>
       <Benefits />
-      <Indicator/>
-      <Plans/>
-      <Faq />
+      <Testimonials/>
+      {/* <Indicator/> */}
+      {/* <Plans/> */}
+      {/* <Faq /> */}
     </div>
   );
 };
