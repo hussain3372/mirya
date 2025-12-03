@@ -13,8 +13,8 @@ const CTA = () => {
           industries and enhance human experiences.
         </p>
         <GradientButton
-          label="Get A Demo"
-          href="#"
+          label="Get Started"
+          href="/contact"
           bgColor="#fff"
           textColor="#0274FE"
         />

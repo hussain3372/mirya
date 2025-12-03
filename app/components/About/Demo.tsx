@@ -294,9 +294,9 @@ export default function Demo(): React.ReactElement {
           </motion.div>
 
           <GradientButton
-            label="Get A Demo"
-            href="#"
-            bgColor="black"
+            label="Get Started"
+            href="/contact"
+            bgColor="#0274FE"
             textColor="#fff"
           />
 
